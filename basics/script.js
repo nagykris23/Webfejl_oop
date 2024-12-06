@@ -117,7 +117,7 @@ class Bird extends Animal {
     }
 
     // kiírja hogy a madár repül
-    repül() {
+    repul() {
         console.log(this.name + " repül");
     }
 }
@@ -129,7 +129,7 @@ class Mammal extends Animal {
     }
 
     //kiírja, hogy az emlős gyalogol
-    sétal() {
+    setal() {
         console.log(this.name + " gyalogol");
     }
 }
@@ -137,10 +137,10 @@ class Mammal extends Animal {
 //Új bird létrehozása
 const bird = new Bird("cinege");
 bird.hang(); // Madár hangot ad
-bird.repül(); // Madár repül
+bird.repul(); // Madár repül
 
 // ugyan az mint a madár 
 // Új mammal létrehozása
 const mammal = new Mammal("Macska");
 mammal.hang(); // Emlős hangot ad
-mammal.sétal(); // Emlős gyalogol
+mammal.setal(); // Emlős gyalogol
