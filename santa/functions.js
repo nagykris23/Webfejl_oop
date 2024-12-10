@@ -9,8 +9,13 @@ function createRow(companion){
     const tableRow = document.createElement('tr');
     tbody.appendChild(tableRow);
 
-   // TODO 7
 
+   // TODO 7
+    const td = createCell(tableRow)
+    const td_1 = createCell(tableRow)
+    td.innerHTML = companion.getname()
+    td_1.innerHTML = companion.reszleg;
+    
     const action = createCell(tableRow)
     const button = document.createElement('button');
     button.innerHTML = 'Megtekint';
@@ -70,7 +75,7 @@ function refreshProductList(companion){ //TODO
  * 
  * @param {HTMLFormElement} form 
  */
-function addCompanion(form){ //TODO 
+function addCompanion(form, factory){ //TODO 
     const firstName =form.querySelector('#cfirstname')
     const lastname =form.querySelector('#clastname')
     const area = form.querySelector('#carea')
@@ -78,6 +83,9 @@ function addCompanion(form){ //TODO
     const lastNameValue = lastname.value;
     const areaValue = area.value;
     // TODO 6
+    const id = factory.creatID()//példányositas az elkért id segitségével
+    const comp = new companion(id, firstNameValue, lastNameValue, areaValue)
+    factory.manoadd(comp)
 }
 
 /**
