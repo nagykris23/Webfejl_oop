@@ -7,6 +7,10 @@ class Factory {
     }
     manoadd(mano) {//függvény letrehozasa mano parameter mert feltoltjuk
         this.manolista.push(mano);//manolistahoz hozza fuzunk egy elemet this egy factory peldany
+        createRow(mano)
+    }
+    creatID(){//id létrehozása
+        return this.manolista.length//returnölés
     }
 }
 
