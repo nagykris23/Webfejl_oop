@@ -1,0 +1,8 @@
+generateTextForExport(){
+        const result = []
+        for(const question of this.#array ){
+            const line = `${question.questionText};${question.answers.join(';')};${question.rightAnswer}`
+            result.push(line)
+        }
+        return result.join('\n')
+    }
